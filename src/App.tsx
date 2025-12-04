@@ -4,13 +4,11 @@ import { Footer } from "@/components/layout/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { Home } from "@/pages/Home"
 import { About } from "@/pages/About"
-import { Products } from "@/pages/Products"
-import { Technology } from "@/pages/Technology"
-import { Colors } from "@/pages/Colors"
-import { Laboratory } from "@/pages/Laboratory"
-import { Certificates } from "@/pages/Certificates"
+import { ProductsColorsCertificates } from "@/pages/ProductsColorsCertificates"
+import { TechnologyLaboratory } from "@/pages/TechnologyLaboratory"
 import { Clients } from "@/pages/Clients"
 import { Contact } from "@/pages/Contact"
+import { Gallery } from "@/pages/Gallery"
 
 function App() {
   return (
@@ -22,12 +20,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/colors" element={<Colors />} />
-            <Route path="/laboratory" element={<Laboratory />} />
-            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/products" element={<ProductsColorsCertificates />} />
+            <Route path="/technology" element={<TechnologyLaboratory />} />
             <Route path="/clients" element={<Clients />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

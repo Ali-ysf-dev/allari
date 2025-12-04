@@ -42,7 +42,7 @@ export function Clients() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -60,7 +60,7 @@ export function Clients() {
                 key={client}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "-50px", amount: 0.2 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 whileHover={{ scale: 1.05 }}
               >
@@ -86,7 +86,7 @@ export function Clients() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -121,7 +121,7 @@ export function Clients() {
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "-50px", amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="h-full">

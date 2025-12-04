@@ -60,9 +60,9 @@ export function Contact() {
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              key="contact-form"
             >
               <Card>
                 <CardHeader>
@@ -72,88 +72,101 @@ export function Contact() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {submitted ? (
-                    <div className="text-center py-8">
-                      <CheckCircle className="h-16 w-16 text-allari-green mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3>
-                      <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                          Name *
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
-                        />
+                  <motion.div
+                    key={submitted ? "submitted" : "form"}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {submitted ? (
+                      <div className="text-center py-8">
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                        >
+                          <CheckCircle className="h-16 w-16 text-allari-green mx-auto mb-4" />
+                        </motion.div>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3>
+                        <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
                       </div>
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                          Email *
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                          Phone
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                          Company
-                        </label>
-                        <input
-                          type="text"
-                          id="company"
-                          name="company"
-                          value={formData.company}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                          Message *
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          required
-                          rows={5}
-                          value={formData.message}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
-                        />
-                      </div>
-                      <Button type="submit" className="w-full" size="lg">
-                        <Send className="h-5 w-5 mr-2" />
-                        Send Message
-                      </Button>
-                    </form>
-                  )}
+                    ) : (
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <div>
+                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                            Name *
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            value={formData.name}
+                            onChange={handleChange}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                            Email *
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                            Phone
+                          </label>
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                            Company
+                          </label>
+                          <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleChange}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
+                          />
+                        </div>
+                        <div>
+                          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                            Message *
+                          </label>
+                          <textarea
+                            id="message"
+                            name="message"
+                            required
+                            rows={5}
+                            value={formData.message}
+                            onChange={handleChange}
+                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
+                          />
+                        </div>
+                        <Button type="submit" className="w-full" size="lg">
+                          <Send className="h-5 w-5 mr-2" />
+                          Send Message
+                        </Button>
+                      </form>
+                    )}
+                  </motion.div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -161,9 +174,8 @@ export function Contact() {
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className="space-y-6"
             >
               <Card>

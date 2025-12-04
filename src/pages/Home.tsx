@@ -64,7 +64,7 @@ export function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -86,7 +86,7 @@ export function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -106,7 +106,7 @@ export function Home() {
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-50px", amount: 0.2 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -133,7 +133,7 @@ export function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >

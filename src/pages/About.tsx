@@ -58,7 +58,7 @@ export function About() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.2 }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
@@ -83,7 +83,7 @@ export function About() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.2 }}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -102,7 +102,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -119,7 +119,7 @@ export function About() {
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-50px", amount: 0.2 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card className="h-full">
@@ -146,7 +146,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -166,7 +166,7 @@ export function About() {
                   key={milestone.year}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-50px", amount: 0.2 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative ${index % 2 === 0 ? 'md:text-right' : 'md:text-left md:ml-auto'} md:w-5/12`}
                 >
