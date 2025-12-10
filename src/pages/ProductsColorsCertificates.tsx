@@ -23,6 +23,8 @@ const applications = [
     category: "Agriculture",
     icon: Sprout,
     color: "bg-green-100 text-green-700",
+    image:
+      "https://i.pinimg.com/1200x/5c/3f/9a/5c3f9ad68987dca864503ffe84b0b7a0.jpg",
     products: [
       "Crop covers",
       "Fruit covers",
@@ -41,6 +43,8 @@ const applications = [
     category: "Furniture & Mattress",
     icon: Sofa,
     color: "bg-blue-100 text-blue-700",
+    image:
+      "https://i.pinimg.com/1200x/31/6a/29/316a292dc29d6421bcfe5fccd8c8e5c5.jpg",
     products: [
       "Spring mattress liners",
       "Sofa liners",
@@ -61,6 +65,8 @@ const applications = [
     category: "Packaging",
     icon: Package,
     color: "bg-orange-100 text-orange-700",
+    image:
+      "https://i.pinimg.com/1200x/34/aa/17/34aa177bc8d7b820f2cce9121bb902a0.jpg",
     products: [
       "Shopping bags",
       "Grocery bags",
@@ -79,6 +85,8 @@ const applications = [
     category: "Laminated Packaging",
     icon: Layers,
     color: "bg-purple-100 text-purple-700",
+    image:
+      "https://i.pinimg.com/736x/64/a6/55/64a655facf6cc073b31eff9309a258ec.jpg",
     products: [
       "Food & beverage bags",
       "Protective cloth",
@@ -96,6 +104,8 @@ const applications = [
     category: "SPA & Saloon",
     icon: Sparkles,
     color: "bg-pink-100 text-pink-700",
+    image:
+      "https://i.pinimg.com/736x/61/b5/ef/61b5efaeea3a6c84c051dcd64880974e.jpg",
     products: [
       "Disposable bed cover rolls",
       "Massage table sheets (round/sun/cross holes)"
@@ -130,19 +140,25 @@ const certificates = [
     name: "ISO 9001",
     description: "International standard for quality management systems, ensuring consistent quality and customer satisfaction",
     icon: Award,
-    color: "bg-blue-100 text-blue-700"
+    color: "bg-blue-100 text-blue-700",
+    image:
+      "https://static.wixstatic.com/media/4774ac_739b0b58a55045759ed81932ccc49d7f~mv2.png/v1/fill/w_210,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_739b0b58a55045759ed81932ccc49d7f~mv2.png",
   },
   {
     name: "OEKO-TEX Standard 100",
     description: "Independent certification system for textile products tested for harmful substances, ensuring human-ecological safety",
     icon: Shield,
-    color: "bg-green-100 text-green-700"
+    color: "bg-green-100 text-green-700",
+    image:
+      "https://static.wixstatic.com/media/4774ac_bf31b33d97ae41ff9c5563118fadecc6~mv2.jpeg/v1/fill/w_238,h_238,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_bf31b33d97ae41ff9c5563118fadecc6~mv2.jpeg",
   },
   {
     name: "Saudi Made",
     description: "Official certification recognizing products manufactured in Saudi Arabia, supporting local industry and quality standards",
     icon: CheckCircle,
-    color: "bg-amber-100 text-amber-700"
+    color: "bg-amber-100 text-amber-700",
+    image:
+      "https://static.wixstatic.com/media/4774ac_8de3205ff6524247a8d46c741688fb6a~mv2.jpg/v1/fill/w_180,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SAUDI_MADE_main_vertical_PANTONEc_edited.jpg",
   }
 ]
 
@@ -159,7 +175,7 @@ export function ProductsColorsCertificates() {
             className="text-center"
           >
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Products, Colors & Certificates
+              Products & Colors
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-100 sm:text-xl max-w-3xl mx-auto">
               Discover our products, color options, and quality certifications
@@ -234,10 +250,21 @@ export function ProductsColorsCertificates() {
                             )
                           })}
                         </div>
-                        <div className="mt-6 aspect-video rounded-lg bg-gray-200 flex items-center justify-center">
-                          <Package className="h-16 w-16 text-gray-400" />
-                          <span className="sr-only">Product Image Placeholder</span>
-                        </div>
+                      <div className="mt-6 aspect-video rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center">
+                        {app.image ? (
+                          <img
+                            src={app.image}
+                            alt={`${app.category} example`}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <>
+                            <Package className="h-16 w-16 text-gray-400" />
+                            <span className="sr-only">Product Image Placeholder</span>
+                          </>
+                        )}
+                      </div>
                       </div>
                     </div>
                   </Card>
@@ -249,7 +276,7 @@ export function ProductsColorsCertificates() {
       </section>
 
       {/* Colors Section */}
-      <section className="py-24 sm:py-32 bg-[rgb(17,24,39)]">
+      <section className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,10 +285,10 @@ export function ProductsColorsCertificates() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
               Color Options
             </h2>
-            <p className="text-lg text-gray-100 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose from our standard colors or request custom Pantone-matched colors for your specific needs
             </p>
           </motion.div>
@@ -323,90 +350,6 @@ export function ProductsColorsCertificates() {
         </div>
       </section>
 
-      {/* Certificates Section */}
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
-              Our Certifications
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We maintain the highest industry standards through rigorous certification processes
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {certificates.map((cert, index) => {
-              const Icon = cert.icon
-              return (
-                <motion.div
-                  key={cert.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card className="h-full hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <div className={`${cert.color} rounded-lg p-6 mb-4 flex items-center justify-center`}>
-                        <Icon className="h-12 w-12" />
-                      </div>
-                      <CardTitle className="text-2xl">{cert.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base">{cert.description}</CardDescription>
-                      <div className="mt-6 aspect-video rounded-lg bg-gray-200 flex items-center justify-center">
-                        <Award className="h-16 w-16 text-gray-400" />
-                        <span className="sr-only">Certificate Image Placeholder</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              )
-            })}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-allari-green" />
-                  Why Certifications Matter
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4 text-gray-600">
-                  <p>
-                    Our certifications demonstrate our commitment to quality, safety, and environmental
-                    responsibility. They provide assurance to our customers that our products meet the
-                    highest international standards.
-                  </p>
-                  <ul className="space-y-2 list-disc list-inside">
-                    <li>Quality assurance and consistency</li>
-                    <li>Compliance with international standards</li>
-                    <li>Customer confidence and trust</li>
-                    <li>Competitive advantage in the market</li>
-                    <li>Continuous improvement processes</li>
-                    <li>Environmental and safety compliance</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
     </div>
   )
 }
