@@ -160,7 +160,7 @@ export function Contact() {
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-allari-green focus:border-transparent"
                           />
                         </div>
-                        <Button type="submit" className="w-full" size="lg">
+                        <Button type="submit" className="w-full bg-allari-green text-white hover:bg-allari-green-dark hover:text-white" size="lg">
                           <Send className="h-5 w-5 mr-2" />
                           Send Message
                         </Button>

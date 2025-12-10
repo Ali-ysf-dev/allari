@@ -107,35 +107,6 @@ export function Gallery() {
             ))}
           </div>
 
-          {/* Instructions for adding images */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="mt-16 p-6 bg-gray-50 rounded-lg"
-          >
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">How to Add Images</h3>
-            <div className="space-y-2 text-gray-600">
-              <p>To add images to the gallery:</p>
-              <ol className="list-decimal list-inside space-y-2 ml-4">
-                <li>Add your images to the <code className="bg-gray-200 px-2 py-1 rounded">public</code> folder</li>
-                <li>Open <code className="bg-gray-200 px-2 py-1 rounded">src/pages/Gallery.tsx</code></li>
-                <li>Add new objects to the <code className="bg-gray-200 px-2 py-1 rounded">galleryImages</code> array:</li>
-              </ol>
-              <pre className="bg-gray-800 text-green-400 p-4 rounded-lg mt-4 overflow-x-auto text-sm">
-{`{
-  id: 13,
-  src: "/your-image.jpg",
-  alt: "Description",
-  size: "medium" // Options: "small", "medium", "large", "wide", "tall"
-}`}
-              </pre>
-              <p className="mt-4">
-                <strong>Size options:</strong> small, medium, large, wide, tall - each creates different grid cell sizes
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -153,7 +124,7 @@ export function Gallery() {
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-10 right-0 text-white hover:text-allari-green transition-colors"
+              className="absolute -top-10 right-0 bg-[rgb(17,24,39)] text-white hover:bg-white hover:text-black transition-colors duration-[400ms] px-3 py-1 rounded-md"
             >
               ✕ Close
             </button>

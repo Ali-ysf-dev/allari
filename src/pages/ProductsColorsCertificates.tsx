@@ -249,7 +249,7 @@ export function ProductsColorsCertificates() {
       </section>
 
       {/* Colors Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
+      <section className="py-24 sm:py-32 bg-[rgb(17,24,39)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -258,10 +258,10 @@ export function ProductsColorsCertificates() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
               Color Options
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-100 max-w-2xl mx-auto">
               Choose from our standard colors or request custom Pantone-matched colors for your specific needs
             </p>
           </motion.div>

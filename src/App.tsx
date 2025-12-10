@@ -6,7 +6,6 @@ import { Home } from "@/pages/Home"
 import { About } from "@/pages/About"
 import { ProductsColorsCertificates } from "@/pages/ProductsColorsCertificates"
 import { TechnologyLaboratory } from "@/pages/TechnologyLaboratory"
-import { Clients } from "@/pages/Clients"
 import { Contact } from "@/pages/Contact"
 import { Gallery } from "@/pages/Gallery"
 
@@ -22,7 +21,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<ProductsColorsCertificates />} />
             <Route path="/technology" element={<TechnologyLaboratory />} />
-            <Route path="/clients" element={<Clients />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
