@@ -12,11 +12,9 @@ import {
   Leaf,
   Printer,
   Recycle,
-  Palette,
-  CheckCircle,
-  Award
+  Palette
 } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const applications = [
   {
@@ -133,33 +131,6 @@ const standardColors = [
   { name: "Purple", hex: "#9333ea", bg: "bg-purple-600", border: "border-purple-500" },
   { name: "Brown", hex: "#92400e", bg: "bg-amber-800", border: "border-amber-700" },
   { name: "Gray", hex: "#6b7280", bg: "bg-gray-500", border: "border-gray-400" },
-]
-
-const certificates = [
-  {
-    name: "ISO 9001",
-    description: "International standard for quality management systems, ensuring consistent quality and customer satisfaction",
-    icon: Award,
-    color: "bg-blue-100 text-blue-700",
-    image:
-      "https://static.wixstatic.com/media/4774ac_739b0b58a55045759ed81932ccc49d7f~mv2.png/v1/fill/w_210,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_739b0b58a55045759ed81932ccc49d7f~mv2.png",
-  },
-  {
-    name: "OEKO-TEX Standard 100",
-    description: "Independent certification system for textile products tested for harmful substances, ensuring human-ecological safety",
-    icon: Shield,
-    color: "bg-green-100 text-green-700",
-    image:
-      "https://static.wixstatic.com/media/4774ac_bf31b33d97ae41ff9c5563118fadecc6~mv2.jpeg/v1/fill/w_238,h_238,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_bf31b33d97ae41ff9c5563118fadecc6~mv2.jpeg",
-  },
-  {
-    name: "Saudi Made",
-    description: "Official certification recognizing products manufactured in Saudi Arabia, supporting local industry and quality standards",
-    icon: CheckCircle,
-    color: "bg-amber-100 text-amber-700",
-    image:
-      "https://static.wixstatic.com/media/4774ac_8de3205ff6524247a8d46c741688fb6a~mv2.jpg/v1/fill/w_180,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SAUDI_MADE_main_vertical_PANTONEc_edited.jpg",
-  }
 ]
 
 export function ProductsColorsCertificates() {
