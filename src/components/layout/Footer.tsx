@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Factory, Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
   return (
@@ -8,8 +8,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <Factory className="h-8 w-8 text-allari-green mr-2" />
-              <span className="text-xl font-bold">Ibrahim Allari & Sons Co.</span>
+              <img
+                src="https://static.wixstatic.com/media/4774ac_affae09a06934273960d79741b06df9c~mv2.png/v1/fill/w_510,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_affae09a06934273960d79741b06df9c~mv2.png"
+                alt="Ibrahim Allari & Sons Co. logo"
+                className="h-10 w-auto"
+                loading="lazy"
+              />
+              <span className="sr-only">Ibrahim Allari & Sons Co.</span>
             </div>
             <p className="text-gray-400 mb-4">
               Leading manufacturer, supplier, and exporter of PP Spun-bond Non-Woven Fabric in Saudi Arabia.
@@ -63,7 +68,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Ibrahim Allari & Sons Co. All rights reserved.</p>
+          <p>© 2025 allari Co. All rights reserved.</p>
         </div>
       </div>
     </footer>

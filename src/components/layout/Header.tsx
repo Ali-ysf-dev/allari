@@ -23,9 +23,13 @@ export function Header() {
         <div className="flex w-full items-center justify-between border-b border-gray-200 py-4 lg:border-none">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-allari-green">
-                Ibrahim Allari & Sons Co.
-              </span>
+              <img
+                src="https://static.wixstatic.com/media/4774ac_affae09a06934273960d79741b06df9c~mv2.png/v1/fill/w_510,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_affae09a06934273960d79741b06df9c~mv2.png"
+                alt="Ibrahim Allari & Sons Co. logo"
+                className="h-10 w-auto"
+                loading="lazy"
+              />
+              <span className="sr-only">Ibrahim Allari & Sons Co.</span>
             </Link>
           </div>
           <div className="ml-10 space-x-4 hidden lg:block">
