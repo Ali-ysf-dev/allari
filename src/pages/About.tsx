@@ -240,73 +240,27 @@ export function About() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {certificates.map((cert, index) => {
-              const Icon = cert.icon
-              return (
-                <motion.div
-                  key={cert.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card className="h-full hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <div className={`${cert.color} rounded-lg p-6 mb-4 flex items-center justify-center`}>
-                        <Icon className="h-12 w-12" />
-                      </div>
-                      <CardTitle className="text-2xl">{cert.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base">{cert.description}</CardDescription>
-                      <div className="mt-6 rounded-lg bg-white flex items-center justify-center p-4 shadow-sm">
-                        <img
-                          src={cert.image}
-                          alt={`${cert.name} certificate`}
-                          className="max-h-40 w-auto object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              )
-            })}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-allari-green" />
-                  Why Certifications Matter
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4 text-gray-600">
-                  <p>
-                    Our certifications demonstrate our commitment to quality, safety, and environmental responsibility. They
-                    provide assurance to our customers that our products meet the highest international standards.
-                  </p>
-                  <ul className="space-y-2 list-disc list-inside">
-                    <li>Quality assurance and consistency</li>
-                    <li>Compliance with international standards</li>
-                    <li>Customer confidence and trust</li>
-                    <li>Competitive advantage in the market</li>
-                    <li>Continuous improvement processes</li>
-                    <li>Environmental and safety compliance</li>
-                  </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {certificates.map((cert, index) => (
+              <motion.div
+                key={cert.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px", amount: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center justify-center"
+              >
+                <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow w-full flex items-center justify-center">
+                  <img
+                    src={cert.image}
+                    alt={`${cert.name} certificate`}
+                    className="max-h-64 w-auto object-contain"
+                    loading="lazy"
+                  />
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
