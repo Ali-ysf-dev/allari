@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Factory, Target, Award, Users, Calendar, CheckCircle, Shield } from "lucide-react"
+import { Target, Award, Users, Calendar, CheckCircle, Shield } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import companyOverviewImage from "@/assets/freepik_assistant_1766015046421.png"
 
