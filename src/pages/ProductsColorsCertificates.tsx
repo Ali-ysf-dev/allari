@@ -20,7 +20,7 @@ const applications = [
   {
     category: "Agriculture",
     icon: Sprout,
-    color: "bg-green-100 text-green-700",
+    color: "bg-[#7CC405]/10 text-[#7CC405]",
     image:
       "https://i.pinimg.com/1200x/5c/3f/9a/5c3f9ad68987dca864503ffe84b0b7a0.jpg",
     products: [
@@ -124,7 +124,7 @@ const standardColors = [
   { name: "Navy Blue", hex: "#1e3a8a", bg: "bg-blue-900", border: "border-blue-800" },
   { name: "Royal Blue", hex: "#2563eb", bg: "bg-blue-600", border: "border-blue-500" },
   { name: "Red", hex: "#dc2626", bg: "bg-red-600", border: "border-red-500" },
-  { name: "Green", hex: "#16a34a", bg: "bg-green-600", border: "border-green-500" },
+  { name: "Green", hex: "#7CC405", bg: "bg-[#7CC405]", border: "border-[#7CC405]" },
   { name: "Yellow", hex: "#eab308", bg: "bg-yellow-500", border: "border-yellow-400" },
   { name: "Orange", hex: "#ea580c", bg: "bg-orange-600", border: "border-orange-500" },
   { name: "Pink", hex: "#db2777", bg: "bg-pink-600", border: "border-pink-500" },
@@ -159,10 +159,10 @@ export function ProductsColorsCertificates() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
@@ -179,10 +179,10 @@ export function ProductsColorsCertificates() {
               return (
                 <motion.div
                   key={app.category}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
                   <Card className="overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -228,6 +228,10 @@ export function ProductsColorsCertificates() {
                             alt={`${app.category} example`}
                             className="w-full h-full object-cover"
                             loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="450"
+                            fetchPriority={index === 0 ? "high" : "low"}
                           />
                         ) : (
                           <>
@@ -250,10 +254,10 @@ export function ProductsColorsCertificates() {
       <section className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
@@ -286,10 +290,10 @@ export function ProductsColorsCertificates() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px", amount: 0.2 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3 }}
             className="max-w-4xl mx-auto"
           >
             <Card>

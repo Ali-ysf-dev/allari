@@ -53,9 +53,9 @@ export default {
         },
         // Allari brand colors - Green & White
         allari: {
-          green: "#22c55e",
-          "green-dark": "#16a34a",
-          "green-light": "#4ade80",
+          green: "#7CC405",
+          "green-dark": "#6BB004",
+          "green-light": "#8CDE06",
           white: "#ffffff",
         },
       },

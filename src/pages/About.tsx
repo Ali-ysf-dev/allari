@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { Factory, Target, Award, Users, Calendar, CheckCircle, Shield } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import companyOverviewImage from "@/assets/freepik_assistant_1766015046421.png"
 
 const values = [
   {
@@ -44,7 +45,7 @@ const certificates = [
     description:
       "Independent certification system for textile products tested for harmful substances, ensuring human-ecological safety",
     icon: Shield,
-    color: "bg-green-100 text-green-700",
+    color: "bg-[#7CC405]/10 text-[#7CC405]",
     image:
       "https://static.wixstatic.com/media/4774ac_bf31b33d97ae41ff9c5563118fadecc6~mv2.jpeg/v1/fill/w_238,h_238,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4774ac_bf31b33d97ae41ff9c5563118fadecc6~mv2.jpeg",
   },
@@ -115,11 +116,15 @@ export function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px", amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="relative flex items-center justify-center"
             >
-              <div className="aspect-square rounded-lg bg-gray-200 flex items-center justify-center">
-                <Factory className="h-32 w-32 text-gray-400" />
-                <span className="sr-only">Factory Image Placeholder</span>
+              <div className="aspect-square w-full max-w-lg rounded-lg overflow-hidden">
+                <img
+                  src={companyOverviewImage}
+                  alt="Ibrahim Allari & Sons Co. manufacturing facility"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </motion.div>
           </div>

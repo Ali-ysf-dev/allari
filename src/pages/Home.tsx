@@ -14,6 +14,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import heroImage from "@/assets/freepik_assistant_1765973033956.png"
 
 const benefits = [
   { icon: Factory, title: "World-class infrastructure", description: "State-of-the-art facilities" },
@@ -42,31 +43,99 @@ export function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-allari-green to-allari-green-dark text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <section className="relative text-white overflow-hidden" style={{ backgroundColor: '#7CC405' }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
           >
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl text-white">
-              Leading Manufacturer of
-              <br />
-              <span className="text-white drop-shadow-lg">PP Spun-bond Non-Woven Fabric</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-white sm:text-xl max-w-2xl mx-auto">
-              Established in 2017, Ibrahim Allari & Sons Co. is one of Saudi Arabia's premier manufacturers,
-              suppliers, and exporters of non-woven fabrics. Known for trust, integrity, transparency, and
-              advanced technical expertise.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
-              <Button asChild size="lg" className="shadow-lg">
-                <Link to="/products">Explore Products</Link>
-              </Button>
-              <Button asChild size="lg">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
+            <div className="text-center lg:text-left space-y-6 lg:space-y-8">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white leading-tight">
+                Leading Manufacturer of
+                <br />
+                <span className="text-white drop-shadow-lg">PP Spun-bond Non-Woven Fabric</span>
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-xl leading-relaxed text-white/95 max-w-2xl mx-auto lg:mx-0">
+                Established in 2017, Ibrahim Allari & Sons Co. is one of Saudi Arabia's premier manufacturers,
+                suppliers, and exporters of non-woven fabrics. Known for trust, integrity, transparency, and
+                advanced technical expertise.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 pt-4">
+                <Button asChild size="lg" className="w-full sm:w-auto shadow-lg">
+                  <Link to="/products">Explore Products</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-allari-green">
+                  <Link to="/contact">Contact Us</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="flex items-center justify-center lg:justify-end">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="w-full max-w-xl lg:max-w-2xl relative"
+              >
+                {/* Animated background pattern */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-white/10 via-transparent to-white/5 rounded-3xl blur-2xl animate-pulse"></div>
+                
+                <div className="relative p-4 lg:p-6">
+                  {/* Outer decorative border with gradient */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/50 via-white/35 to-white/15 border-4 border-white/70 backdrop-blur-md shadow-2xl"></div>
+                  
+                  {/* Animated border glow */}
+                  <motion.div 
+                    className="absolute inset-0 rounded-3xl border-2 border-white/50"
+                    animate={{ 
+                      boxShadow: [
+                        '0 0 20px rgba(255,255,255,0.3)',
+                        '0 0 40px rgba(255,255,255,0.5)',
+                        '0 0 20px rgba(255,255,255,0.3)'
+                      ]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  ></motion.div>
+                  
+                  {/* Inner glow effect with multiple layers */}
+                  <div className="absolute inset-2 rounded-2xl bg-gradient-to-br from-white/15 via-white/5 to-transparent"></div>
+                  <div className="absolute inset-3 rounded-xl bg-gradient-to-tl from-white/10 to-transparent"></div>
+                  
+                  {/* Geometric pattern overlay */}
+                  <div className="absolute inset-0 rounded-3xl opacity-20">
+                    <div className="absolute top-4 left-4 w-20 h-20 border-2 border-white/60 rounded-lg rotate-45"></div>
+                    <div className="absolute bottom-4 right-4 w-16 h-16 border-2 border-white/60 rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 border-2 border-white/50 rounded-lg rotate-12"></div>
+                  </div>
+                  
+                  {/* Image container with enhanced styling */}
+                  <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md p-6 shadow-inner">
+                    {/* Shine effect overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent rounded-2xl"></div>
+                    
+                    <img
+                      src={heroImage}
+                      alt="Non-woven fabric manufacturing"
+                      className="w-full h-auto object-contain relative z-10 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                      loading="eager"
+                    />
+                  </div>
+                  
+                  {/* Enhanced decorative corner accents */}
+                  <div className="absolute -top-2 -left-2 w-20 h-20 border-t-4 border-l-4 border-white/80 rounded-tl-3xl bg-white/15 backdrop-blur-sm"></div>
+                  <div className="absolute -bottom-2 -right-2 w-20 h-20 border-b-4 border-r-4 border-white/80 rounded-br-3xl bg-white/15 backdrop-blur-sm"></div>
+                  
+                  {/* Additional corner details */}
+                  <div className="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-white/70 rounded-tl-xl"></div>
+                  <div className="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-white/70 rounded-br-xl"></div>
+                  
+                  {/* Floating particles effect */}
+                  <div className="absolute top-8 right-8 w-2 h-2 bg-white/60 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-12 left-12 w-1.5 h-1.5 bg-white/50 rounded-full animate-pulse"></div>
+                  <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-white/40 rounded-full"></div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
