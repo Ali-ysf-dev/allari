@@ -68,7 +68,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>© 2025 allari Co. All rights reserved.</p>
+          <p>© 2025 Ali Youssef . All rights reserved.</p>
         </div>
       </div>
     </footer>
