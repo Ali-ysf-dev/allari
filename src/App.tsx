@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { WelcomePopup } from "@/components/WelcomePopup"
 import { Home } from "@/pages/Home"
 import { About } from "@/pages/About"
 import { ProductsColorsCertificates } from "@/pages/ProductsColorsCertificates"
@@ -13,6 +14,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <WelcomePopup />
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
